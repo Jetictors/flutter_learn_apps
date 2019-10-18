@@ -1,18 +1,25 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
-class RandomWord extends StatefulWidget{
+///
+/// Desc           :  flutter first app example
+/// Author         :  Jetictors
+/// Time           :  2019/10/17 11:24
+/// Email          :  zhengxcfutures@gmail.com
+/// Version        :  v-1.0.1
+///
+class RandomWordPage extends StatefulWidget{
 
-  RandomWord({ Key key, this.title }) : super(key: key);
+  RandomWordPage({ Key key, this.title }) : super(key: key);
 
   final String title;
 
   @override
-  _RandomWordState createState() => new _RandomWordState();
+  _RandomWordPageState createState() => new _RandomWordPageState();
 
 }
 
-class _RandomWordState extends State<RandomWord>{
+class _RandomWordPageState extends State<RandomWordPage>{
 
   final _suggestions = <WordPair>[];
   final _biggerFont = new TextStyle(fontSize: 16.0, color: Colors.red);
@@ -24,6 +31,7 @@ class _RandomWordState extends State<RandomWord>{
       appBar: new AppBar(
         title: new Text(widget.title),
         backgroundColor: Colors.red,
+        centerTitle: true,
         actions: <Widget>[
           new IconButton(icon: new Icon(Icons.list), onPressed: _pushSaved)
         ],

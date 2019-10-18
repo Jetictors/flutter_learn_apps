@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_app/count_page.dart';
-import 'package:flutter_learn_app/first_app.dart';
-import 'package:flutter_learn_app/hello_world_page.dart';
+import 'package:flutter_learn_app/anim/anim_widget_page.dart';
+import 'package:flutter_learn_app/apps/app_page.dart';
+import 'package:flutter_learn_app/basis/basis_widget_page.dart';
+import 'package:flutter_learn_app/apps/count_page.dart';
+import 'package:flutter_learn_app/apps/first_app.dart';
+import 'package:flutter_learn_app/apps/hello_world_page.dart';
+import 'package:flutter_learn_app/middle/middle_widget_page.dart';
+import 'package:flutter_learn_app/other/other_widget_page.dart';
 
 /*
   程序入口
  */
 void main() => runApp(MyApp());
 
+///
+/// Desc           :  flutter Application
+/// Author         :  Jetictors
+/// Time           :  2019/10/17 11:24
+/// Email          :  zhengxcfutures@gmail.com
+/// Version        :  v-1.0.1
+///
 class MyApp extends StatelessWidget{
 
   @override
@@ -25,8 +37,11 @@ class MyApp extends StatelessWidget{
  */
 class HomePage extends StatelessWidget{
 
-  final _icons = <IconData>[Icons.home, Icons.title, Icons.map];
-  final _titles = <String>["Hello World", "Count", "My First App"];
+  final _icons = <IconData>[Icons.home, Icons.print, Icons.copyright,
+    Icons.motorcycle, Icons.devices_other, Icons.map];
+
+  final _titles = <String>["Hello World启程", "基础组件学习", "中级组件学习",
+    "动画和Motin", "其他", "Apps"];
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +88,7 @@ class HomePage extends StatelessWidget{
           fontSize: 16
         ),
       ),
-      trailing: new Icon(Icons.arrow_right, color: Colors.red,),
+      trailing: new Icon(Icons.arrow_right, color: Colors.red),
       onTap: (){
         _tap(context, title, i);
       },
@@ -85,17 +100,19 @@ class HomePage extends StatelessWidget{
    */
   void _tap(context, title, pos){
     switch(pos){
-      case 0: { _jump(context, new HelloWorldWidget(title: title)); }
-      break;
+      case 0: { _jump(context, HelloWorldWidget(title: title)); }break;
 
-      case 1: { _jump(context, new CountPage(title: title)); }
-      break;
+      case 1: { _jump(context, BasisWidgetPage(title: title)); }break;
 
-      case 2: { _jump(context, new RandomWord(title: title)); }
-      break;
+      case 2: { _jump(context, MiddleWidgetPage(title: title)); }break;
 
-      default: {}
-      break;
+      case 3: { _jump(context, AnimWidgetPage(title: title)); }break;
+
+      case 4: { _jump(context, OtherWidgetPage(title: title)); }break;
+
+      case 5: { _jump(context, AppPage(title: title)); }break;
+
+      default: {}break;
     }
   }
 

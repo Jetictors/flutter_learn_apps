@@ -1,6 +1,13 @@
 
 import 'package:flutter/material.dart';
 
+///
+/// Desc           :  flutter 实现一个计数器
+/// Author         :  Jetictors
+/// Time           :  2019/10/17 11:24
+/// Email          :  zhengxcfutures@gmail.com
+/// Version        :  v-1.0.1
+///
 class CountPage extends StatefulWidget{
 
   CountPage({Key key, this.title}) : super(key: key);
