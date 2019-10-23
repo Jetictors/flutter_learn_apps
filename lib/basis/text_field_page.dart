@@ -22,7 +22,7 @@ class TextFieldPage extends StatelessWidget{
         backgroundColor: Colors.red,
       ),
       body: new Center(
-//        child: TextField(title),
+        child: Text(title),
       ),
     );
   }

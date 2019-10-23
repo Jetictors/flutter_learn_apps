@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn_app/anim/anim_widget_page.dart';
 import 'package:flutter_learn_app/apps/app_page.dart';
 import 'package:flutter_learn_app/basis/basis_widget_page.dart';
-import 'package:flutter_learn_app/apps/count_page.dart';
-import 'package:flutter_learn_app/apps/first_app.dart';
 import 'package:flutter_learn_app/apps/hello_world_page.dart';
 import 'package:flutter_learn_app/middle/middle_widget_page.dart';
 import 'package:flutter_learn_app/other/other_widget_page.dart';

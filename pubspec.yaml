@@ -54,6 +54,13 @@ flutter:
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
+  assets:
+    - imgs/ic_lock_close.png
+    - imgs/ic_header_1.png
+    - imgs/ic_header_2.png
+    - imgs/ic_header_3.png
+    - imgs/ic_header_4.png
+    - imgs/ic_header_5.png
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
@@ -74,3 +81,7 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: MyIconFonts
+      fonts:
+        - asset: assets/fonts/myIconFont.ttf
