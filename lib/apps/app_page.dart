@@ -1,16 +1,7 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_app/apps/count_page.dart';
 import 'package:flutter_learn_app/apps/first_app.dart';
-import 'package:flutter_learn_app/basis/button_page.dart';
-import 'package:flutter_learn_app/basis/check_box_page.dart';
-import 'package:flutter_learn_app/basis/form_page.dart';
-import 'package:flutter_learn_app/basis/icon_page.dart';
-import 'package:flutter_learn_app/basis/image_page.dart';
-import 'package:flutter_learn_app/basis/switch_page.dart';
-import 'package:flutter_learn_app/basis/text_field_page.dart';
-import 'package:flutter_learn_app/basis/text_page.dart';
 
 ///
 /// Desc           :  基础组件页
@@ -73,7 +64,6 @@ class AppPage extends StatelessWidget{
   }
 
   void _tap(context, name, pos){
-    log(name);
     switch(pos){
       case 0 : { _jump(context, CountPage(title: name,)); } break;
       case 1 : { _jump(context, RandomWordPage(title: name)); } break;

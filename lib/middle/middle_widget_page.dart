@@ -1,14 +1,13 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_app/basis/button_page.dart';
-import 'package:flutter_learn_app/basis/check_box_page.dart';
-import 'package:flutter_learn_app/basis/form_page.dart';
-import 'package:flutter_learn_app/basis/icon_page.dart';
-import 'package:flutter_learn_app/basis/image_page.dart';
-import 'package:flutter_learn_app/basis/switch_page.dart';
-import 'package:flutter_learn_app/basis/text_field_page.dart';
-import 'package:flutter_learn_app/basis/text_page.dart';
+import 'package:flutter_learn_app/middle/align_page.dart';
+import 'package:flutter_learn_app/middle/confined_box_page.dart';
+import 'package:flutter_learn_app/middle/container_page.dart';
+import 'package:flutter_learn_app/middle/decorated_box_page.dart';
+import 'package:flutter_learn_app/middle/flex_page.dart';
+import 'package:flutter_learn_app/middle/flow_page.dart';
+import 'package:flutter_learn_app/middle/linear_page.dart';
+import 'package:flutter_learn_app/middle/padding_page.dart';
+import 'package:flutter_learn_app/middle/stack_page.dart';
 
 ///
 /// Desc           :  中级组件页
@@ -37,9 +36,9 @@ class MiddleWidgetPage extends StatelessWidget{
 
   Widget _listView(){
 
-    final _tabName = <String>["文本（Text）", "按钮（Button）", "图片（Image）",
-      "图标（Icon）", "单选开关（Switch）", "复选框（CheckBox）", "输入框（TextField）",
-      "表单（Form）"];
+    final _tabName = <String>["线性布局（Row和Column）", "弹性布局（Flex）", "流式布局（Wrap、Flow）",
+      "层叠布局（Stack、Positioned）", "对齐与相对定位（Align）", "填充（Padding）", "容器（Container）",
+      "装饰容器（DecoratedBox）", "尺寸限制类容器"];
 
     return new ListView.builder(
       padding: EdgeInsets.all(12),
@@ -68,16 +67,16 @@ class MiddleWidgetPage extends StatelessWidget{
   }
 
   void _tap(context, name, pos){
-    log(name);
     switch(pos){
-      case 0 : { _jump(context, TextPage(title: name,)); } break;
-      case 1 : { _jump(context, ButtonPage(title: name)); } break;
-      case 2 : { _jump(context, ImagePage(title: name)); } break;
-      case 3 : { _jump(context, IconPage(title: name)); } break;
-      case 4 : { _jump(context, SwitchPage(title: name)); } break;
-      case 5 : { _jump(context, CheckBoxPage(title: name)); } break;
-      case 6 : { _jump(context, TextFieldPage(title: name)); } break;
-      case 7 : { _jump(context, FormPage(title: name)); } break;
+      case 0 : { _jump(context, LinearPage(title: name,)); } break;
+      case 1 : { _jump(context, FlexPage(title: name)); } break;
+      case 2 : { _jump(context, FlowPage(title: name)); } break;
+      case 3 : { _jump(context, StackPage(title: name)); } break;
+      case 4 : { _jump(context, AlignPage(title: name)); } break;
+      case 5 : { _jump(context, PaddingPage(title: name)); } break;
+      case 6 : { _jump(context, ContainerPage(title: name)); } break;
+      case 7 : { _jump(context, DecoratedBoxPage(title: name)); } break;
+      case 8 : { _jump(context, ConfinedBoxPage(title: name)); } break;
       default: { print("error pos !"); } break;
     }
   }

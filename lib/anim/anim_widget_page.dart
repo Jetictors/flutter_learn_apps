@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_app/basis/button_page.dart';
 import 'package:flutter_learn_app/basis/check_box_page.dart';
@@ -68,7 +66,6 @@ class AnimWidgetPage extends StatelessWidget{
   }
 
   void _tap(context, name, pos){
-    log(name);
     switch(pos){
       case 0 : { _jump(context, TextPage(title: name,)); } break;
       case 1 : { _jump(context, ButtonPage(title: name)); } break;

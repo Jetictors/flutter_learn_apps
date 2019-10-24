@@ -1,11 +1,10 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_app/basis/button_page.dart';
 import 'package:flutter_learn_app/basis/check_box_page.dart';
 import 'package:flutter_learn_app/basis/form_page.dart';
 import 'package:flutter_learn_app/basis/icon_page.dart';
 import 'package:flutter_learn_app/basis/image_page.dart';
+import 'package:flutter_learn_app/basis/progress_page.dart';
 import 'package:flutter_learn_app/basis/switch_page.dart';
 import 'package:flutter_learn_app/basis/text_field_page.dart';
 import 'package:flutter_learn_app/basis/text_page.dart';
@@ -39,7 +38,7 @@ class BasisWidgetPage extends StatelessWidget{
 
     final _tabName = <String>["文本（Text）", "按钮（Button）", "图片（Image）",
       "图标（Icon）", "单选开关（Switch）", "复选框（CheckBox）", "输入框（TextField）",
-      "表单（Form）"];
+      "表单（Form）", "进度条（Progress）"];
 
     return new ListView.builder(
       padding: EdgeInsets.all(12),
@@ -68,7 +67,6 @@ class BasisWidgetPage extends StatelessWidget{
   }
 
   void _tap(context, name, pos){
-    log(name);
     switch(pos){
       case 0 : { _jump(context, TextPage(title: name,)); } break;
       case 1 : { _jump(context, ButtonPage(title: name)); } break;
@@ -78,6 +76,7 @@ class BasisWidgetPage extends StatelessWidget{
       case 5 : { _jump(context, CheckBoxPage(title: name)); } break;
       case 6 : { _jump(context, TextFieldPage(title: name)); } break;
       case 7 : { _jump(context, FormPage(title: name)); } break;
+      case 8 : { _jump(context, ProgressPage(title: name)); } break;
       default: { print("error pos !"); } break;
     }
   }
