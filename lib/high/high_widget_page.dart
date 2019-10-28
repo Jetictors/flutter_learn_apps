@@ -10,6 +10,7 @@ import 'package:flutter_learn_app/high/nested_scroll_view_page.dart';
 import 'package:flutter_learn_app/high/page_view_page.dart';
 import 'package:flutter_learn_app/high/single_child_scroll_view_page.dart';
 import 'package:flutter_learn_app/high/tab_bar_page.dart';
+import 'package:flutter_learn_app/util/utils.dart';
 
 
 ///
@@ -72,29 +73,19 @@ class HighWidgetPage extends StatelessWidget{
 
   void _tap(context, name, pos){
     switch(pos){
-      case 0 : { _jump(context, ListViewPage(title: name,)); } break;
-      case 1 : { _jump(context, GridViewPage(title: name)); } break;
-      case 2 : { _jump(context, SingleChildScrollViewPage(title: name)); } break;
-      case 3 : { _jump(context, NestedScrollViewPage(title: name)); } break;
-      case 4 : { _jump(context, CustomScrollViewPage(title: name)); } break;
-      case 5 : { _jump(context, PageViewPage(title: name)); } break;
-      case 6 : { _jump(context, AppBarPage(title: name)); } break;
-      case 7 : { _jump(context, DrawerPage(title: name)); } break;
-      case 8 : { _jump(context, BottomNavigationBarPage(title: name)); } break;
-      case 9 : { _jump(context, TabBarPage(title: name)); } break;
-      case 10 : { _jump(context, DialogPage(title: name)); } break;
+      case 0 : { CommonUtil.launcher(context, ListViewPage(title: name,)); } break;
+      case 1 : { CommonUtil.launcher(context, GridViewPage(title: name)); } break;
+      case 2 : { CommonUtil.launcher(context, SingleChildScrollViewPage(title: name)); } break;
+      case 3 : { CommonUtil.launcher(context, NestedScrollViewPage(title: name)); } break;
+      case 4 : { CommonUtil.launcher(context, CustomScrollViewPage(title: name)); } break;
+      case 5 : { CommonUtil.launcher(context, PageViewPage(title: name)); } break;
+      case 6 : { CommonUtil.launcher(context, AppBarPage(title: name)); } break;
+      case 7 : { CommonUtil.launcher(context, DrawerPage(title: name)); } break;
+      case 8 : { CommonUtil.launcher(context, BottomNavigationBarPage(title: name)); } break;
+      case 9 : { CommonUtil.launcher(context, TabBarPage(title: name)); } break;
+      case 10 : { CommonUtil.launcher(context, DialogPage(title: name)); } break;
       default: { print("error pos !"); } break;
     }
-  }
-
-  void _jump(context, cls){
-    Navigator.of(context).push(
-        new MaterialPageRoute(
-            builder: (context){
-              return cls;
-            }
-        )
-    );
   }
 
 }

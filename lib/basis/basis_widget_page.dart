@@ -8,6 +8,7 @@ import 'package:flutter_learn_app/basis/progress_page.dart';
 import 'package:flutter_learn_app/basis/switch_page.dart';
 import 'package:flutter_learn_app/basis/text_field_page.dart';
 import 'package:flutter_learn_app/basis/text_page.dart';
+import 'package:flutter_learn_app/util/utils.dart';
 
 ///
 /// Desc           :  基础组件页
@@ -68,27 +69,17 @@ class BasisWidgetPage extends StatelessWidget{
 
   void _tap(context, name, pos){
     switch(pos){
-      case 0 : { _jump(context, TextPage(title: name,)); } break;
-      case 1 : { _jump(context, ButtonPage(title: name)); } break;
-      case 2 : { _jump(context, ImagePage(title: name)); } break;
-      case 3 : { _jump(context, IconPage(title: name)); } break;
-      case 4 : { _jump(context, SwitchPage(title: name)); } break;
-      case 5 : { _jump(context, CheckBoxPage(title: name)); } break;
-      case 6 : { _jump(context, TextFieldPage(title: name)); } break;
-      case 7 : { _jump(context, FormPage(title: name)); } break;
-      case 8 : { _jump(context, ProgressPage(title: name)); } break;
+      case 0 : { CommonUtil.launcher(context, TextPage(title: name,)); } break;
+      case 1 : { CommonUtil.launcher(context, ButtonPage(title: name)); } break;
+      case 2 : { CommonUtil.launcher(context, ImagePage(title: name)); } break;
+      case 3 : { CommonUtil.launcher(context, IconPage(title: name)); } break;
+      case 4 : { CommonUtil.launcher(context, SwitchPage(title: name)); } break;
+      case 5 : { CommonUtil.launcher(context, CheckBoxPage(title: name)); } break;
+      case 6 : { CommonUtil.launcher(context, TextFieldPage(title: name)); } break;
+      case 7 : { CommonUtil.launcher(context, FormPage(title: name)); } break;
+      case 8 : { CommonUtil.launcher(context, ProgressPage(title: name)); } break;
       default: { print("error pos !"); } break;
     }
-  }
-
-  void _jump(context, cls){
-    Navigator.of(context).push(
-        new MaterialPageRoute(
-            builder: (context){
-              return cls;
-            }
-        )
-    );
   }
 
 }

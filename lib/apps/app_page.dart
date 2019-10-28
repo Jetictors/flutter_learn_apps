@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_app/apps/count_page.dart';
 import 'package:flutter_learn_app/apps/first_app.dart';
+import 'package:flutter_learn_app/util/utils.dart';
 
 ///
 /// Desc           :  基础组件页
@@ -65,20 +65,10 @@ class AppPage extends StatelessWidget{
 
   void _tap(context, name, pos){
     switch(pos){
-      case 0 : { _jump(context, CountPage(title: name,)); } break;
-      case 1 : { _jump(context, RandomWordPage(title: name)); } break;
+      case 0 : { CommonUtil.launcher(context, CountPage(title: name,)); } break;
+      case 1 : { CommonUtil.launcher(context, RandomWordPage(title: name)); } break;
       default: { print("error pos !"); } break;
     }
-  }
-
-  void _jump(context, cls){
-    Navigator.of(context).push(
-        new MaterialPageRoute(
-            builder: (context){
-              return cls;
-            }
-        )
-    );
   }
 
 }
