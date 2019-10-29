@@ -18,11 +18,10 @@ class MyApp extends StatelessWidget{
       home: HomePage(),
     );
   }
-
 }
 
 /*
   程序入口
  */
-void main() => runApp(MyApp());
+main() => runApp(MyApp());
 

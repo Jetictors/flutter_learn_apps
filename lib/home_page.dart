@@ -11,15 +11,12 @@ import 'package:flutter_learn_app/other/other_widget_page.dart';
 import 'package:flutter_learn_app/util/utils.dart';
 
 ///
-/// Desc           :  自定义字体图标封装
+/// Desc           :  首页
 /// Author         :  Jetictors
 /// Time           :  2019/10/23 12:07
 /// Email          :  zhengxcfutures@gmail.com
-/// Version        :  v-
+/// Version        :  v-1.0.1
 ///
-/*
-  首页
- */
 class HomePage extends StatelessWidget {
 
   final _icons = <IconData>[Icons.home, Icons.print, Icons.copyright,
