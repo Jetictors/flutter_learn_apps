@@ -89,7 +89,13 @@ class DrawerPage extends StatelessWidget{
           )
         ),
         body: Center(
-          child: Text(title),
+          child: OutlineButton(
+            child: Text("关闭当前页", style: TextStyle(color: Colors.red)),
+            onPressed: (){
+              // 关闭当前页
+              Navigator.of(context).pop();
+            },
+          )
         )
     );
   }

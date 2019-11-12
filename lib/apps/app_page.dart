@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn_app/apps/calculator_page.dart';
 import 'package:flutter_learn_app/apps/count_page.dart';
 import 'package:flutter_learn_app/apps/first_app.dart';
 import 'package:flutter_learn_app/util/utils.dart';
@@ -30,10 +31,12 @@ class AppPage extends StatelessWidget{
 
   Widget _listView(){
 
-    final _icon = <IconData>[Icons.title, Icons.favorite_border];
+    final _icon = <IconData>[Icons.title, Icons.favorite_border, Icons.details];
 
-    final _tabName = <String>["简易计数器", "第一个Flutter App"];
-    final _subTitle = <String>["对一个数字实现递增和递减", "官网中的实例，显示以及收藏单词"];
+    final _tabName = <String>["简易计数器", "第一个Flutter App", "简易计算器"];
+    final _subTitle = <String>["对一个数字实现递增和递减",
+      "官网中的实例，显示以及收藏单词",
+      "一个计算器，实现加减乘除操作"];
 
     return new ListView.builder(
       padding: EdgeInsets.all(12),
@@ -67,6 +70,7 @@ class AppPage extends StatelessWidget{
     switch(pos){
       case 0 : { CommonUtil.launcher(context, CountPage(title: name,)); } break;
       case 1 : { CommonUtil.launcher(context, RandomWordPage(title: name)); } break;
+      case 2 : { CommonUtil.launcher(context, CalculatorPage(title: name)); } break;
       default: { print("error pos !"); } break;
     }
   }
