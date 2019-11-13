@@ -47,12 +47,14 @@ class _BottomBarPageState extends State<BottomNavigationBarPage>{
               Builder(builder: (context){
                 return IconButton(
                   icon: Icon(Icons.home, color: Colors.red),
+                  onPressed: null,
                 );
               }),
               SizedBox(),
               Builder(builder: (context){
                 return IconButton(
                   icon: Icon(Icons.home, color: Colors.red),
+                  onPressed: null,
                 );
               }),
             ],
