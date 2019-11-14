@@ -8,6 +8,7 @@ import 'package:flutter_learn_app/middle/flow_page.dart';
 import 'package:flutter_learn_app/middle/linear/linear_page.dart';
 import 'package:flutter_learn_app/middle/padding_page.dart';
 import 'package:flutter_learn_app/middle/stack_page.dart';
+import 'package:flutter_learn_app/middle/transform_page.dart';
 import 'package:flutter_learn_app/util/utils.dart';
 
 ///
@@ -39,7 +40,7 @@ class MiddleWidgetPage extends StatelessWidget{
 
     final _tabName = <String>["线性布局（Row和Column）", "弹性布局（Flex）", "流式布局（Wrap、Flow）",
       "层叠布局（Stack、Positioned）", "对齐与相对定位（Align）", "填充（Padding）", "容器（Container）",
-      "装饰容器（DecoratedBox）", "尺寸限制类容器"];
+      "装饰容器（DecoratedBox）", "尺寸限制类容器", "变换（Transform）"];
 
     return new ListView.builder(
       padding: EdgeInsets.all(12),
@@ -78,6 +79,7 @@ class MiddleWidgetPage extends StatelessWidget{
       case 6 : { CommonUtil.launcher(context, ContainerPage(title: name)); } break;
       case 7 : { CommonUtil.launcher(context, DecoratedBoxPage(title: name)); } break;
       case 8 : { CommonUtil.launcher(context, ConfinedBoxPage(title: name)); } break;
+      case 9 : { CommonUtil.launcher(context, TransformPage(title: name)); } break;
       default: { print("error pos !"); } break;
     }
   }
