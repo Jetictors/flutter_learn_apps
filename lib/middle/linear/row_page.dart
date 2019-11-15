@@ -11,6 +11,8 @@ class RowPage extends StatelessWidget{
 
   final String title;
 
+  final _titleStyle = TextStyle(color: Colors.red);
+
   RowPage({Key key, this.title}) : super(key : key);
 
   @override
@@ -45,7 +47,7 @@ class RowPage extends StatelessWidget{
         // 测试Row对齐方式，排除Column默认居中对齐的干扰
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text("1、测试主轴的对齐方式 mainAxisAlignment"),
+          Text("1、测试主轴的对齐方式 mainAxisAlignment", style: _titleStyle),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -65,7 +67,7 @@ class RowPage extends StatelessWidget{
         // 测试Row对齐方式，排除Column默认居中对齐的干扰
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text("2、测试主轴的宽度 mainAxisSize"),
+          Text("2、测试主轴的宽度 mainAxisSize", style: _titleStyle),
           Row(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -86,7 +88,7 @@ class RowPage extends StatelessWidget{
         // 测试Row对齐方式，排除Column默认居中对齐的干扰
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text("3、测试textDirection"),
+          Text("3、测试textDirection", style: _titleStyle),
           Row(
             textDirection: TextDirection.rtl,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -107,7 +109,7 @@ class RowPage extends StatelessWidget{
         // 测试Row对齐方式，排除Column默认居中对齐的干扰
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text("4、测试textDirection"),
+          Text("4、测试textDirection", style: _titleStyle),
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             verticalDirection: VerticalDirection.up,

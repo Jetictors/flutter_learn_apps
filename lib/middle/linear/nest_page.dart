@@ -11,6 +11,8 @@ class NestPage extends StatelessWidget{
 
   final String title;
 
+  final _titleStyle = TextStyle(color: Colors.red);
+
   NestPage({Key key, this.title}) : super(key : key);
 
   @override
@@ -43,7 +45,7 @@ class NestPage extends StatelessWidget{
         // 测试Row对齐方式，排除Column默认居中对齐的干扰
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text("1、Row嵌套Row测试, 可以看出内部Row设置的属性无效"),
+          Text("1、Row嵌套Row测试, 可以看出内部Row设置的属性无效", style: _titleStyle),
           Row(
             children: <Widget>[
               FlatButton.icon(onPressed: null, icon: Icon(Icons.access_alarm), label: Text("组件1")),
@@ -70,7 +72,7 @@ class NestPage extends StatelessWidget{
         // 测试Row对齐方式，排除Column默认居中对齐的干扰
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text("2、解决Row嵌套Row方案，使用Expanded组件"),
+          Text("2、解决Row嵌套Row方案，使用Expanded组件", style: _titleStyle),
           Row(
             children: <Widget>[
               FlatButton.icon(onPressed: null, icon: Icon(Icons.access_alarm), label: Text("组件1")),
@@ -98,7 +100,7 @@ class NestPage extends StatelessWidget{
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text("3、Column嵌套Column测试, 以及用Expanded解决"),
+          Text("3、Column嵌套Column测试, 以及用Expanded解决", style: _titleStyle),
           Row(
             children: <Widget>[
               Expanded(

@@ -11,6 +11,8 @@ class ColumnPage extends StatelessWidget{
 
   final String title;
 
+  final _titleStyle = new TextStyle(color: Colors.red);
+
   ColumnPage({Key key, this.title}) : super(key : key);
 
   @override
@@ -50,7 +52,7 @@ class ColumnPage extends StatelessWidget{
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text("1、测试从轴的对齐方式 crossAxisAlignment"),
+          Text("1、测试从轴的对齐方式 crossAxisAlignment", style: _titleStyle),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -69,7 +71,7 @@ class ColumnPage extends StatelessWidget{
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text("2、测试从轴的对齐方式 crossAxisAlignment"),
+          Text("2、测试从轴的对齐方式 crossAxisAlignment", style: _titleStyle),
           Column(
             children: <Widget>[
               Text("组件1" * 3),
@@ -87,7 +89,7 @@ class ColumnPage extends StatelessWidget{
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text("3、测试从轴的对齐方式 crossAxisAlignment"),
+          Text("3、测试从轴的对齐方式 crossAxisAlignment", style: _titleStyle),
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
@@ -106,7 +108,7 @@ class ColumnPage extends StatelessWidget{
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text("4、测试textDirection"),
+          Text("4、测试textDirection", style: _titleStyle),
           Column(
             textDirection: TextDirection.rtl,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -126,7 +128,7 @@ class ColumnPage extends StatelessWidget{
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text("5、测试textDirection"),
+          Text("5、测试textDirection", style: _titleStyle),
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             verticalDirection: VerticalDirection.up,
@@ -150,7 +152,7 @@ class ColumnPage extends StatelessWidget{
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text("6、使纵轴占满全屏"),
+            Text("6、使纵轴占满全屏", style: _titleStyle),
             ConstrainedBox(
               constraints: BoxConstraints(minWidth: double.infinity),
               child: Column(

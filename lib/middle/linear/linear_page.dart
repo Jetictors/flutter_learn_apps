@@ -14,6 +14,7 @@ import 'package:flutter_learn_app/util/utils.dart';
 class LinearPage extends StatelessWidget{
 
   final String title;
+
   final _titleStyle = TextStyle(color: Colors.red);
 
   LinearPage({Key key, this.title}) : super(key : key);
