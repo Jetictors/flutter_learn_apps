@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_app/high/app_bar_page.dart';
 import 'package:flutter_learn_app/high/bottom_navigation_bar_page.dart';
@@ -84,7 +86,7 @@ class HighWidgetPage extends StatelessWidget{
       case 8 : { CommonUtil.launcher(context, BottomNavigationBarPage(title: name)); } break;
       case 9 : { CommonUtil.launcher(context, TabBarPage(title: name)); } break;
       case 10 : { CommonUtil.launcher(context, DialogPage(title: name)); } break;
-      default: { print("error pos !"); } break;
+      default: { log("error pos !"); } break;
     }
   }
 

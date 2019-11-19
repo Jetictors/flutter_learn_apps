@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oktoast/oktoast.dart';
 
 import 'home_page.dart';
 
@@ -13,9 +14,18 @@ class MyApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Flutter Learn App",
-      home: HomePage(),
+    return OKToast(
+      position: ToastPosition.bottom,
+      textAlign: TextAlign.center,
+      backgroundColor: Colors.black54,
+      textStyle: TextStyle(color: Colors.white, fontSize: 16),
+      radius: 12,
+      textPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      dismissOtherOnShow: true,
+      child: MaterialApp(
+        title: "Flutter Learn App",
+        home: HomePage(),
+      ),
     );
   }
 }

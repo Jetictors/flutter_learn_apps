@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_app/middle/align_page.dart';
 import 'package:flutter_learn_app/middle/confined_box_page.dart';
@@ -80,7 +82,7 @@ class MiddleWidgetPage extends StatelessWidget{
       case 7 : { CommonUtil.launcher(context, DecoratedBoxPage(title: name)); } break;
       case 8 : { CommonUtil.launcher(context, ConfinedBoxPage(title: name)); } break;
       case 9 : { CommonUtil.launcher(context, TransformPage(title: name)); } break;
-      default: { print("error pos !"); } break;
+      default: { log("error pos !"); } break;
     }
   }
 

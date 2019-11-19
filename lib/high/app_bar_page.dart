@@ -1,6 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:oktoast/oktoast.dart';
 
 ///
 /// Desc           :  flutter 顶部导航栏组件（AppBar）学习
@@ -65,7 +64,7 @@ class AppBarPage extends StatelessWidget{
           centerTitle: true,
           leading: Builder(builder: (context){
             return IconButton(icon: Icon(Icons.add, color: Colors.white), onPressed: (){
-              log("second示例中的左边按钮被点击了！");
+              showToast("second示例中的左边按钮被点击了！");
             });
           })
         ),
@@ -146,12 +145,12 @@ class AppBarPage extends StatelessWidget{
           actions: <Widget>[
             Builder(builder: (context){
               return IconButton(icon: Icon(Icons.add, color: Colors.white), onPressed: (){
-                log("six示例中的右边第一个按钮被点击了！");
+                showToast("six示例中的右边第一个按钮被点击了！");
               });
             }),
             Builder(builder: (context){
               return FlatButton(child: Text("完成", style: TextStyle(color: Colors.white, fontSize: 16)), onPressed: (){
-                log("six示例中的右边第二个按钮被点击了！");
+                showToast("six示例中的右边第二个按钮被点击了！");
               });
             }),
           ],

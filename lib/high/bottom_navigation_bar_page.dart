@@ -1,6 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:oktoast/oktoast.dart';
 
 ///
 /// Desc           :  flutter 底部导航栏组件（BottomNavigationBar）学习
@@ -109,12 +108,12 @@ class _BottomBarPageState extends State<BottomNavigationBarPage>{
   void _firstOnTap(int index){
     setState(() {
       _firstSelectIndex = index;
-      log("切换到了${index + 1}个按钮");
+      showToast("切换到了${index + 1}个按钮");
     });
   }
 
   void _onAdd(){
-    log("floatingActionButton被点击了");
+    showToast("floatingActionButton被点击了");
   }
 
 }

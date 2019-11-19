@@ -1,6 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:oktoast/oktoast.dart';
 
 ///
 /// Desc           :  flutter 侧边栏组件（Drawer）学习
@@ -57,25 +56,25 @@ class DrawerPage extends StatelessWidget{
                               ListTile(
                                 title: Text("首页"),
                                 leading: Icon(Icons.home, color: Colors.red),
-                                onTap: (){ log("go home page"); },
+                                onTap: (){ showToast("go home page"); },
                               ),
                               Divider(),
                               ListTile(
                                 title: Text("设置"),
                                 leading: Icon(Icons.settings, color: Colors.red),
-                                onTap: (){ log("go Setting page"); },
+                                onTap: (){ showToast("go Setting page"); },
                               ),
                               Divider(),
                               ListTile(
                                 title: Text("关于我们"),
                                 leading: Icon(Icons.image, color: Colors.red),
-                                onTap: (){ log("go About page"); },
+                                onTap: (){ showToast("go About page"); },
                               ),
                               Divider(),
                               ListTile(
                                 title: Text("意见反馈"),
                                 leading: Icon(Icons.feedback, color: Colors.red),
-                                onTap: (){ log("go Feedback page"); },
+                                onTap: (){ showToast("go Feedback page"); },
                               ),
                               Divider()
                             ],

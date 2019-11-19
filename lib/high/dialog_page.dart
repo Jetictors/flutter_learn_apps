@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:oktoast/oktoast.dart';
 
 ///
 /// Desc           :  flutter 对话框（Dialog）学习
@@ -65,7 +66,7 @@ class DialogPage extends StatelessWidget{
       case 9: _showOtherDialog(context); break;
       case 10: _showRadioButtonDialog(context); break;
       case 11: _showCheckBoxDialog(context); break;
-      default: { log("pos is extis!"); } break;
+      default: { log("pos is error!"); } break;
     }
   }
 
@@ -332,7 +333,7 @@ class DialogPage extends StatelessWidget{
                 child: Text("确定"),
                 onPressed: (){
                   Navigator.of(context).pop();
-                  log("${_groupValue + 1} item chick select !");
+                  showToast("${_groupValue + 1} item chick select !");
                 },
               )
             ],
@@ -346,8 +347,11 @@ class DialogPage extends StatelessWidget{
 
   void _showCheckBoxDialog(BuildContext context){
 
-    bool _itemCheck = false;
-    final _selectList = <bool>[];
+    final _selectCheckList = <bool>[];
+
+    for(int i = 0 ; i < 15; i++){
+      _selectCheckList.add(false);
+    }
 
     showDialog(
         context : context,
@@ -363,7 +367,7 @@ class DialogPage extends StatelessWidget{
                   ),
                   Expanded(
                     child: ListView.builder(
-                        itemCount: 10,
+                        itemCount: _selectCheckList.length,
                         itemBuilder: (context, index){
                           return Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -372,17 +376,12 @@ class DialogPage extends StatelessWidget{
                                 title: Text("item ${index + 1}"),
                                 activeColor: Colors.blue,
                                 checkColor: Colors.red,
-                                value: _itemCheck,
+                                value: _selectCheckList[index],
                                 onChanged: (value){
                                   (context as Element).markNeedsBuild();
-                                  _itemCheck = value;
-                                  if(value){
-                                    _selectList.add(value);
-                                  }else{
-                                    _selectList.remove(value);
-                                  }
+                                  _selectCheckList[index] = value;
                                 },
-                                selected: _itemCheck,
+                                selected: _selectCheckList[index],
                               ),
                               Divider()
                             ],
@@ -394,6 +393,18 @@ class DialogPage extends StatelessWidget{
                     child: Text("确定"),
                     onPressed: (){
                       Navigator.of(context).pop();
+
+                      String msg = "";
+                      for(int i = 0; i < _selectCheckList.length; i++){
+                        if(_selectCheckList[i]){
+                          msg += (i + 1).toString() + ",";
+                        }
+                      }
+                      if(msg.isEmpty){
+                        showToast("您还没有选择哦");
+                      }else{
+                        showToast(msg + "item chick select !");
+                      }
 
                     },
                   )

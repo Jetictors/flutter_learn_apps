@@ -1,6 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:oktoast/oktoast.dart';
 
 ///
 /// Desc           :  flutter 按钮组件(Button)学习
@@ -222,7 +221,7 @@ class ButtonPage extends StatelessWidget{
   }
 
   void _toast(String str){
-    log("$str is onPress");
+    showToast("$str is onPress");
   }
 
 }
