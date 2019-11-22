@@ -6,27 +6,27 @@ import 'package:flutter_learn_app/other/locale_page.dart';
 import 'package:flutter_learn_app/util/utils.dart';
 
 ///
-/// Desc           :  基础组件页
+/// Desc           :  自定义组件页
 /// Author         :  Jetictors
 /// Time           :  2019/10/17 11:39
 /// Email          :  zhengxcfutures@gmail.com
 /// Version        :  v-1.0.1
 ///
-class OtherWidgetPage extends StatelessWidget{
+class CustomWidgetPage extends StatelessWidget{
 
-  OtherWidgetPage({Key key, this.title}) : super(key : key);
+  CustomWidgetPage({Key key, this.title}) : super(key : key);
 
   final String title;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.red,
-        centerTitle: true,
-        title: Text(title),
-      ),
-      body: _listView()
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+          centerTitle: true,
+          title: Text(title),
+        ),
+        body: _listView()
     );
   }
 

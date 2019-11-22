@@ -36,7 +36,8 @@ class TextPage extends StatelessWidget{
             _sevenText(),
             _eightText(),
             _nineText(),
-            _tenText()
+            _tenText(),
+            _fontText(),
           ],
       ),
     );
@@ -203,7 +204,6 @@ class TextPage extends StatelessWidget{
     设置DefaultTextStyle
    */
   Widget _tenText(){
-
     return Column(
       children: <Widget>[
         ListTile(
@@ -229,6 +229,18 @@ class TextPage extends StatelessWidget{
                 ],
               ),
             ),
+        ),
+        Divider()
+      ],
+    );
+  }
+
+  Widget _fontText(){
+    return Column(
+      children: <Widget>[
+        ListTile(
+          title: Text("11、使用自定义字体", style: _titleStyle),
+          subtitle: Text("我是使用了华文行楷字体的文本哦", style: TextStyle(fontFamily: "HuaWenXingKai")),
         ),
         Divider()
       ],

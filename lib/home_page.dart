@@ -5,6 +5,7 @@ import 'package:flutter_learn_app/anim/anim_widget_page.dart';
 import 'package:flutter_learn_app/apps/app_page.dart';
 import 'package:flutter_learn_app/basis/basis_widget_page.dart';
 import 'package:flutter_learn_app/apps/hello_world_page.dart';
+import 'package:flutter_learn_app/custom/custom_widget_page.dart';
 import 'package:flutter_learn_app/high/high_widget_page.dart';
 import 'package:flutter_learn_app/middle/middle_widget_page.dart';
 import 'package:flutter_learn_app/other/other_widget_page.dart';
@@ -20,10 +21,11 @@ import 'package:flutter_learn_app/util/utils.dart';
 class HomePage extends StatelessWidget {
 
   final _icons = <IconData>[Icons.home, Icons.print, Icons.copyright,
-    Icons.high_quality, Icons.motorcycle, Icons.devices_other, Icons.map];
+    Icons.high_quality, Icons.directions, Icons.motorcycle, Icons.devices_other,
+    Icons.map];
 
   final _titles = <String>["Hello World启程", "基础组件学习", "中级组件学习",
-    "高级组件学习", "动画和Motin", "其他", "Apps"];
+    "高级组件学习", "自定义组件", "动画和Motin", "其他", "Apps"];
 
   @override
   Widget build(BuildContext context) {
@@ -86,9 +88,10 @@ class HomePage extends StatelessWidget {
       case 1: { CommonUtil.launcher(context, BasisWidgetPage(title: title)); } break;
       case 2: { CommonUtil.launcher(context, MiddleWidgetPage(title: title)); } break;
       case 3: { CommonUtil.launcher(context, HighWidgetPage(title: title)); } break;
-      case 4: { CommonUtil.launcher(context, AnimWidgetPage(title: title)); } break;
-      case 5: { CommonUtil.launcher(context, OtherWidgetPage(title: title)); } break;
-      case 6: { CommonUtil.launcher(context, AppPage(title: title)); } break;
+      case 4: { CommonUtil.launcher(context, CustomWidgetPage(title: title)); } break;
+      case 5: { CommonUtil.launcher(context, AnimWidgetPage(title: title)); } break;
+      case 6: { CommonUtil.launcher(context, OtherWidgetPage(title: title)); } break;
+      case 7: { CommonUtil.launcher(context, AppPage(title: title)); } break;
       default: { log("error pos !"); }break;
     }
   }

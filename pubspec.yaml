@@ -85,3 +85,7 @@ flutter:
     - family: MyIconFonts
       fonts:
         - asset: assets/fonts/myIconFont.ttf
+    - family: HuaWenXingKai
+      fonts:
+        - asset: assets/fonts/huaWenXingKai.ttf
+
