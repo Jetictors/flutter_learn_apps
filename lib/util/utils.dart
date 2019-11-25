@@ -25,4 +25,9 @@ class CommonUtil{
     );
   }
 
+  static bool isPhoneNum(String phoneNum){
+    RegExp mobile = new RegExp(r"1[0-9]\d{9}$");
+    return mobile.hasMatch(phoneNum);
+  }
+
 }

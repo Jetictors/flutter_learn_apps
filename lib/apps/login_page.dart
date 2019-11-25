@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn_app/util/utils.dart';
 
 ///
 /// Desc           :  实现一个登录页面
@@ -190,10 +191,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  bool _isPhoneNum(String phoneNum){
-    RegExp mobile = new RegExp(r"1[0-9]\d{9}$");
-    return mobile.hasMatch(phoneNum);
-  }
+
 
   void _clearUser(){
       _userController.clear();
@@ -217,7 +215,7 @@ class _LoginPageState extends State<LoginPage> {
       return;
     }
 
-    if(!_isPhoneNum(phoneNum)){
+    if(!CommonUtil.isPhoneNum(phoneNum)){
       _showDialog("请输入正确的手机号");
       return;
     }
