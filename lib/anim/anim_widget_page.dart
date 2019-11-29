@@ -36,9 +36,7 @@ class AnimWidgetPage extends StatelessWidget{
 
   Widget _listView(){
 
-    final _tabName = <String>["文本（Text）", "按钮（Button）", "图片（Image）",
-      "图标（Icon）", "单选开关（Switch）", "复选框（CheckBox）", "输入框（TextField）",
-      "表单（Form）"];
+    final _tabName = <String>[];
 
     return new ListView.builder(
       padding: EdgeInsets.all(12),
@@ -79,5 +77,7 @@ class AnimWidgetPage extends StatelessWidget{
       default: { print("error pos !"); } break;
     }
   }
+
+
 
 }
